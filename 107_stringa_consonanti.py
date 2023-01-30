@@ -1,0 +1,7 @@
+stringa = input("Inserisci una frase: ")
+stringa = stringa.replace("a", "")
+stringa = stringa.replace("e", "")
+stringa = stringa.replace("i", "")
+stringa = stringa.replace("o", "")
+stringa = stringa.replace("u", "")
+print(stringa)
