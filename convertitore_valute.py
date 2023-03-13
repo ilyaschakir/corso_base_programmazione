@@ -69,6 +69,10 @@ valute = {
 "dollaro australiano": {"simbolo": "AUD", "tassi": TASSO_CAMBIO_AUD},
 "dollaro canadese": {"simbolo": "CAD", "tassi": TASSO_CAMBIO_CAD}
 }
+valute_disponibili=["euro", "dollaro", "sterlina", "franco", "yen", "dollaro australiano" , "dollaro canadese"]
+visualizza_valute=input("Desideri visualizzare le valute disponibili? (s/n): " .lower())
+if visualizza_valute=="s":
+    print("Le valute disponibili sono: "+str(valute_disponibili))
 conversioni_effettuate = []
 while True:
     quantita = float(input("Inserisci la quantità di valuta di origine: "))
@@ -88,13 +92,13 @@ while True:
     conversione = str(quantita) + " " + valute[valuta_origine]["simbolo"] + " corrispondono a " + str(importo_convertito) + " " + valute[valuta_destinazione]["simbolo"]
     print(conversione)
     conversioni_effettuate.append(conversione)
-    risposta = input("Vuoi fare un'altra conversione? (s/n)").lower()
+    risposta = input("Vuoi fare un'altra conversione? (s/n): ").lower()
     if risposta == "s":
         continue
-    visualizza_conversioni = input("Vuoi visualizzare le conversioni effettuate? (s/n)").lower()
+    visualizza_conversioni = input("Vuoi visualizzare le conversioni effettuate? (s/n): " ).lower()
     if visualizza_conversioni == "s":
         print("Conversioni effettuate:" +str(conversioni_effettuate)) 
         break
     if(risposta!="s" and visualizza_conversioni != "s"):
         break
-print("Grazie per aver usato il mio programma per convertire le valute. Buon proseguimento di giornata.")
+print("Grazie per aver usato il mio programma per convertire le valute, spero che ti sia sato di aiuto. Buon proseguimento di giornata.")
