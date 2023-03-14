@@ -1,58 +1,58 @@
 TASSO_CAMBIO_EURO = {
-"USD": 1.22,
-"JPY": 129.03,
+"USD": 1.07,
+"JPY": 143.96,
 "GBP": 0.88,
-"CHF": 1.11,
-"CAD": 1.48,
-"AUD": 1.56
+"CHF": 0.98,
+"CAD": 1.47,
+"AUD": 1.61
 }
 TASSO_CAMBIO_USD = {
-"EUR": 0.82,
-"JPY": 105.62,
-"GBP": 0.72,
+"EUR": 0.93,
+"JPY": 134.10,
+"GBP": 0.82,
 "CHF": 0.91,
-"CAD": 1.21,
-"AUD": 1.28
+"CAD": 1.37,
+"AUD": 1.50
 }
 TASSO_CAMBIO_GBP = {
-"EUR": 1.14,
-"USD": 1.39,
-"CHF": 1.26,
-"JPY": 146.25,
+"EUR": 1.13,
+"USD": 1.22,
+"CHF": 1.11,
+"JPY": 163.29,
 "CAD": 1.67,
-"AUD": 1.76
+"AUD": 1.82
 }
 TASSO_CAMBIO_CHF = {
-"EUR": 0.9,
+"EUR": 1.02,
 "USD": 1.1,
-"GBP": 0.79,
-"JPY": 116.14,
-"CAD": 1.32,
-"AUD": 1.4
+"GBP": 0.90,
+"JPY": 146.94,
+"CAD": 1.50,
+"AUD": 1.64
 }
 TASSO_CAMBIO_JPY = {
-"EUR": 0.0077,
-"USD": 0.0095,
-"GBP": 0.0068,
-"CHF": 0.0086,
-"CAD": 0.0098,
-"AUD": 0.0104
+"EUR": 0.0069,
+"USD": 0.0075,
+"GBP": 0.0061,
+"CHF": 0.0068,
+"CAD": 0.010,
+"AUD": 0.011
 }
 TASSO_CAMBIO_AUD = {
-"EUR": 0.64,
-"USD": 0.78,
-"GBP": 0.57,
-"CHF": 0.71,
-"JPY": 96.46,
-"CAD": 0.95
+"EUR": 0.62,
+"USD": 0.67,
+"GBP": 0.55,
+"CHF": 0.61,
+"JPY": 89.68,
+"CAD": 0.91
 }
 TASSO_CAMBIO_CAD = {
-"EUR": 0.67,
-"USD": 0.82,
+"EUR": 0.68,
+"USD": 0.73,
 "GBP": 0.6,
-"CHF": 0.75,
-"JPY": 102.63,
-"AUD": 1.06
+"CHF": 0.67,
+"JPY": 98.13,
+"AUD": 1.09
 }
 valute = {
 "euro": {"simbolo": "EUR", "tassi": TASSO_CAMBIO_EURO},
