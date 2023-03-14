@@ -6,7 +6,6 @@ TASSO_CAMBIO_EURO = {
 "CAD": 1.48,
 "AUD": 1.56
 }
-
 TASSO_CAMBIO_USD = {
 "EUR": 0.82,
 "JPY": 105.62,
@@ -15,7 +14,6 @@ TASSO_CAMBIO_USD = {
 "CAD": 1.21,
 "AUD": 1.28
 }
-
 TASSO_CAMBIO_GBP = {
 "EUR": 1.14,
 "USD": 1.39,
@@ -24,7 +22,6 @@ TASSO_CAMBIO_GBP = {
 "CAD": 1.67,
 "AUD": 1.76
 }
-
 TASSO_CAMBIO_CHF = {
 "EUR": 0.9,
 "USD": 1.1,
@@ -33,7 +30,6 @@ TASSO_CAMBIO_CHF = {
 "CAD": 1.32,
 "AUD": 1.4
 }
-
 TASSO_CAMBIO_JPY = {
 "EUR": 0.0077,
 "USD": 0.0095,
@@ -42,7 +38,6 @@ TASSO_CAMBIO_JPY = {
 "CAD": 0.0098,
 "AUD": 0.0104
 }
-
 TASSO_CAMBIO_AUD = {
 "EUR": 0.64,
 "USD": 0.78,
@@ -51,7 +46,6 @@ TASSO_CAMBIO_AUD = {
 "JPY": 96.46,
 "CAD": 0.95
 }
-
 TASSO_CAMBIO_CAD = {
 "EUR": 0.67,
 "USD": 0.82,
@@ -64,12 +58,12 @@ valute = {
 "euro": {"simbolo": "EUR", "tassi": TASSO_CAMBIO_EURO},
 "dollaro": {"simbolo": "USD", "tassi": TASSO_CAMBIO_USD},
 "sterlina": {"simbolo": "GBP", "tassi": TASSO_CAMBIO_GBP},
-"franco": {"simbolo": "CHF", "tassi": TASSO_CAMBIO_CHF},
+"franco svizzero": {"simbolo": "CHF", "tassi": TASSO_CAMBIO_CHF},
 "yen": {"simbolo": "JPY", "tassi": TASSO_CAMBIO_JPY},
 "dollaro australiano": {"simbolo": "AUD", "tassi": TASSO_CAMBIO_AUD},
 "dollaro canadese": {"simbolo": "CAD", "tassi": TASSO_CAMBIO_CAD}
 }
-valute_disponibili=["euro", "dollaro", "sterlina", "franco", "yen", "dollaro australiano" , "dollaro canadese"]
+valute_disponibili=["euro", "dollaro", "sterlina", "franco svizzero", "yen", "dollaro australiano" , "dollaro canadese"]
 visualizza_valute=input("Desideri visualizzare le valute disponibili? (s/n): " .lower())
 if visualizza_valute=="s":
     print("Le valute disponibili sono: "+str(valute_disponibili))
@@ -83,6 +77,9 @@ while True:
     valuta_destinazione = input("Inserisci la valuta di destinazione (es. Dollaro): ").lower()
     if valuta_destinazione not in valute:
         print("Valuta di destinazione non supportata, riprova.")
+        continue
+    if valuta_origine == valuta_destinazione:
+        print("Non puoi inserire la stessa valuta 2 volte! Riprova.")
     if valuta_destinazione.lower() not in valute[valuta_origine]["tassi"] and valuta_destinazione.lower() == valuta_origine:
         print("Tasso di cambio non disponibile per la valuta di destinazione, riprova.")
         continue
@@ -101,4 +98,4 @@ while True:
         break
     if(risposta!="s" and visualizza_conversioni != "s"):
         break
-print("Grazie per aver usato il mio programma per convertire le valute, spero che ti sia sato di aiuto. Buon proseguimento di giornata.")
+print("Grazie per aver usato il mio programma per convertire le valute, spero che ti sia stato di aiuto. Buon proseguimento di giornata.")
