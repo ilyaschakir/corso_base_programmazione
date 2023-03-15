@@ -65,40 +65,44 @@ valute = {
 }
 print("Benvenuto!")
 valute_disponibili=["euro", "dollaro", "sterlina", "franco svizzero", "yen", "dollaro australiano" , "dollaro canadese"]
-visualizza_valute=input("Desideri visualizzare le valute disponibili? (s/n): " .lower())
+visualizza_valute=input("Desideri visualizzare le valute disponibili? (digita o 's' o 'n', se inserisci qualsiasi altra lettera verrà classificata come no!): " .lower())
 if visualizza_valute=="s":
     print("Le valute disponibili sono: "+str(valute_disponibili))   
-visualizza_tassi=input("Desideri visualizzare i tassi di cambio di qualche valuta? (s/n): ").lower()
-valuta_tasso_cambio=input("Di quale valuta desideri vedere i tassi di cambio? (es. Franco svizzero): ").lower()
-if visualizza_tassi=="s":
-    print(valuta_tasso_cambio)
+visualizza_tassi=input("Desideri visualizzare i tassi di cambio di qualche valuta? (s/n mi raccomando!): ").lower()
 while True :
+    
+    if visualizza_tassi=="n" or visualizza_tassi!="s":
+        print("Ok")
+        break
+    valuta_tasso_cambio=input("Di quale valuta desideri vedere i tassi di cambio? (es. Franco svizzero): ").lower()
+    if visualizza_tassi=="s":
+         print(valuta_tasso_cambio)
     if valuta_tasso_cambio not in valute:
-        print("La valuta della quale stai cercando i tassi di cambio non è disponibile. Riprova")
-        
+        print("La valuta della quale stai cercando i tassi di cambio non è disponibile. Riprova")  
     else:
         if valuta_tasso_cambio=="euro":
-            print(TASSO_CAMBIO_EURO)
+            print("Ecco i tassi di cambio dell'euro: "+str(TASSO_CAMBIO_EURO))
             break
         if valuta_tasso_cambio=="dollaro":
-            print(TASSO_CAMBIO_USD)
+            print("Ecco i tassi di cambio del dollaro: "+str(TASSO_CAMBIO_USD))
             break
         if valuta_tasso_cambio=="sterlina":
-            print(TASSO_CAMBIO_GBP)
+            print("Ecco i tassi di cambio della sterlina: "+str(TASSO_CAMBIO_GBP))
             break
         if valuta_tasso_cambio=="franco svizzero":
-            print(TASSO_CAMBIO_CHF)
+            print("Ecco i tassi di cambio del franco svizzero: "+str(TASSO_CAMBIO_CHF))
             break
         if valuta_tasso_cambio=="yen":
-            print(TASSO_CAMBIO_JPY)
+            print("Ecco i tassi di cambio dello yen: "+str(TASSO_CAMBIO_JPY))
             break
         if valuta_tasso_cambio=="dollaro australiano":
-            print(TASSO_CAMBIO_AUD)
+            print("Ecco i tassi di cambio del dollaro australiano: " +str( TASSO_CAMBIO_AUD))
             break
         if valuta_tasso_cambio=="dollaro canadese":
-            print(TASSO_CAMBIO_CAD)
+            print("Ecco i tassi di cambio del dollaro canadese: " +str( TASSO_CAMBIO_CAD))
             break
 conversioni_effettuate = []
+print("Adesso, facciamo la conversione")
 while True:
     quantita = float(input("Inserisci la quantità di valuta di origine: "))
     valuta_origine = input("Inserisci la valuta di origine (es. Euro): ").lower()
