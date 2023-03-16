@@ -104,7 +104,7 @@ while True :
 conversioni_effettuate = []
 print("Adesso, facciamo la conversione")
 while True:
-    quantita = float(input("Inserisci la quantità di valuta di origine: "))
+    quantita = float(input("Inserisci la quantità da convertire: "))
     valuta_origine = input("Inserisci la valuta di origine (es. Euro): ").lower()
     if valuta_origine not in valute:
         print("Valuta di origine non supportata, riprova.")
