@@ -115,8 +115,6 @@ while True:
         continue
     if valuta_origine == valuta_destinazione:
         print("Non puoi inserire la stessa valuta 2 volte! Riprova.")
-    if valuta_destinazione.lower() not in valute[valuta_origine]["tassi"] and valuta_destinazione.lower() == valuta_origine:
-        print("Tasso di cambio non disponibile per la valuta di destinazione, riprova.")
         continue
     simbolo_valuta=valute[valuta_destinazione]["simbolo"]
     tasso_cambio = valute[valuta_origine]["tassi"][simbolo_valuta]
